@@ -8,6 +8,18 @@ DebugLab is an interactive playground for practicing JavaScript and React debugg
 
 DebugLab is an interactive playground for practicing JavaScript and React debugging concepts. It presents coding challenges that help developers reason about code behavior, predict outputs, and understand common frontend pitfalls.
 
+## Screenshots
+
+### Home
+![DebugLab Home](./screenshots/Home.png)
+
+### Challenges
+![DebugLab Challenges](./screenshots/Challenges.png)
+
+### Dashboard
+![DebugLab Dashboard](./screenshots/Dashboard.png)
+
+
 ## Features
 
 - **Interactive challenges:** Solve JavaScript and React questions with multiple-choice answers.
