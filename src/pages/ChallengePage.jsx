@@ -28,6 +28,13 @@ const ChallengePage = ()=>{
         state => state.progress.completedChallengeIds
     )
 
+    const totalChallenges = Challenges.length
+    const completedCount = Challenges.filter(challenge=>completedChallengeIds.includes(challenge.id)).length
+    const completionPercentage = Math.round((completedCount/totalChallenges)*100)
+
+    console.log("Completed IDs:", completedChallengeIds);
+    console.log("Completed count:", completedCount);
+
     return(
         <main className="challenge-page">
             <header className="challenge-header">
@@ -76,6 +83,22 @@ const ChallengePage = ()=>{
             <p className="challenge-count">
                 Showing {filteredChallenges.length} of {Challenges.length} challenges
             </p>
+
+            <div className="overall-progress">
+                <div className="progress-info">
+                    <h3>Your challenge progress</h3>
+                    <span>{completedCount}/{totalChallenges} completed</span>
+                </div>
+
+                <div className="progress-track">
+                    <div
+                        className="progress-fill"
+                        style={{ width: `${completionPercentage}%` }}
+                    ></div>
+                </div>
+
+                <p>{completionPercentage}% completed</p>
+            </div>
 
             <div className="challenge-list">
                 {filteredChallenges.length > 0 ? (
